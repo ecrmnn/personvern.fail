@@ -1,26 +1,35 @@
 const Pageres = require('pageres');
-const { writeFileSync } = require('fs');
+const { existsSync, writeFileSync } = require('fs');
 const axios = require('axios');
 const { slugify } = require('strman');
 const { sites } = require('./sites.json');
+const db = require('./db.json');
 
 const p = new Pageres();
 
 Promise.all(sites.map(async (site) => {
-  const response = await axios.get('https://hotell.difi.no/api/json/brreg/enhetsregisteret', {
-    params: {
-      query: site.org,
-    },
-  });
+  const hasBrreg = db.sites.find((s) => s.name === site.name);
 
-  [site.brreg] = response.data.entries;
+  if (!hasBrreg) {
+    const response = await axios.get('https://hotell.difi.no/api/json/brreg/enhetsregisteret', {
+      params: {
+        query: site.org,
+      },
+    });
+
+    [site.brreg] = response.data.entries;
+  }
 
   site.slug = slugify(site.name);
 
-  await p
-    .src(site.url, ['1440x1000'], { crop: true, filename: site.slug, format: 'jpg' })
-    .dest('./static/img')
-    .run();
+  const hasScreenshot = existsSync(`./static/img/${site.slug}.jpg`);
+
+  if (!hasScreenshot) {
+    await p
+      .src(site.url, ['1440x1000'], { crop: true, filename: site.slug, format: 'jpg' })
+      .dest('./static/img')
+      .run();
+  }
 
   return site;
 })).then((result) => {
