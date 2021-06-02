@@ -1,29 +1,69 @@
 {
   "sites": [
     {
-      "name": "Nordnet",
-      "org": "982503868",
-      "url": "https://www.nordnet.no"
+      "name": "Finansavisen",
+      "org": "930213675",
+      "url": "https://finansavisen.no/"
     },
     {
-      "name": "Rema 1000",
-      "org": "883409442",
-      "url": "https://www.rema.no"
+      "name": "TV2",
+      "org": "962925634",
+      "url": "https://www.tv2.no/"
     },
     {
-      "name": "Lyko",
-      "org": "995398214",
-      "url": "https://lyko.com/no"
+      "name": "Finn.no",
+      "org": "933739384",
+      "url": "https://www.finn.no/"
     },
     {
-      "name": "Telenor",
-      "org": "982463718",
-      "url": "https://telenor.no"
+      "name": "VG",
+      "org": "933739384",
+      "url": "https://www.vg.no/"
     },
     {
-      "name": "Dagbladet",
-      "org": "910119877",
-      "url": "https://www.dagbladet.no"
+      "name": "XXL",
+      "org": "881932792",
+      "url": "https://www.xxl.no/"
+    },
+    {
+      "name": "Tek.no",
+      "org": "933739384",
+      "url": "https://www.tek.no/"
+    },
+    {
+      "name": "Din side",
+      "org": "933739384",
+      "url": "https://www.dinside.no/"
+    },
+    {
+      "name": "Digi.no",
+      "org": "919646683",
+      "url": "https://www.digi.no/"
+    },
+    {
+      "name": "Sarpsborg Arbeiderblad",
+      "org": "979435916",
+      "url": "https://www.sa.no/"
+    },
+    {
+      "name": "Fredrikstad Blad",
+      "org": "911824000",
+      "url": "https://www.f-b.no/"
+    },
+    {
+      "name": "Moss Avis",
+      "org": "914765528",
+      "url": "https://www.moss-avis.no/"
+    },
+    {
+      "name": "Halden Arbeiderblad (HA)",
+      "org": "933799301",
+      "url": "https://www.h-a.no/"
+    },
+    {
+      "name": "NRK",
+      "org": "976390512",
+      "url": "https://www.nrk.no/"
     }
   ]
 }
