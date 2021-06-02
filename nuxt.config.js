@@ -36,10 +36,6 @@ export default {
       property: 'og:description',
       content: 'Liste over norske bedrifter og aktører som bryter personvernloven',
     }, {
-      hid: 'og:url',
-      property: 'og:url',
-      content: 'SHOULD BE SET IN LAYOUT',
-    }, {
       hid: 'og:site_name',
       property: 'og:site_name',
       content: 'Personvern.fail',
