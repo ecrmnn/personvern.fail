@@ -84,6 +84,10 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content: `${this.site.name} bryter personvernloven for egen vinning`,
+      }, {
+        hid: 'og:image',
+        property: 'og:image',
+        content: `https://ogi.sh?title=${encodeURI(this.site.name)}%20bryter%20personvernloven%20for%20egen%20vinning&imageUrl=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fawesomesocialshare.appspot.com%2Fo%2Fimages%252F588c41b3-67d7-46dd-b25a-ee74ed39bb78.webp%3Falt%3Dmedia`,
       }],
     };
   },
