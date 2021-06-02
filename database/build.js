@@ -3,22 +3,17 @@ const { existsSync, writeFileSync } = require('fs');
 const axios = require('axios');
 const { slugify } = require('strman');
 const { sites } = require('./sites.json');
-const db = require('./db.json');
 
 const p = new Pageres();
 
 Promise.all(sites.map(async (site) => {
-  const hasBrreg = db.sites.find((s) => s.name === site.name);
+  const response = await axios.get('https://hotell.difi.no/api/json/brreg/enhetsregisteret', {
+    params: {
+      query: site.org,
+    },
+  });
 
-  if (!hasBrreg) {
-    const response = await axios.get('https://hotell.difi.no/api/json/brreg/enhetsregisteret', {
-      params: {
-        query: site.org,
-      },
-    });
-
-    [site.brreg] = response.data.entries;
-  }
+  [site.brreg] = response.data.entries;
 
   site.slug = slugify(site.name);
 
