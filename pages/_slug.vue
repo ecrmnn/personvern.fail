@@ -69,6 +69,25 @@ export default {
     return { site };
   },
 
+  head() {
+    return {
+      title: this.site.name,
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: `${this.site.name} bryter personvernloven for egen vinning`,
+      }, {
+        hid: 'og:title',
+        property: 'og:title',
+        content: this.site.name,
+      }, {
+        hid: 'og:description',
+        property: 'og:description',
+        content: `${this.site.name} bryter personvernloven for egen vinning`,
+      }],
+    };
+  },
+
   computed: {
     image() {
       return `/img/${this.site.slug}.png`;

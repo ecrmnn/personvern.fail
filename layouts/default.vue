@@ -17,3 +17,29 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  head() {
+    // Adds trailing slash to match sitemap.xml
+    let canonical = `${process.env.BASE_URL}`;
+
+    if (this.$route.path !== '/') {
+      canonical += `${this.$route.path}/`;
+    }
+
+    return {
+      meta: [{
+        hid: 'og:url',
+        property: 'og:url',
+        content: canonical,
+      }],
+      link: [{
+        hid: 'canonical',
+        rel: 'canonical',
+        href: canonical,
+      }],
+    };
+  },
+};
+</script>
