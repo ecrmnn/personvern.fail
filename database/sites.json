@@ -1,0 +1,29 @@
+{
+  "sites": [
+    {
+      "name": "Nordnet",
+      "org": "982503868",
+      "url": "https://www.nordnet.no"
+    },
+    {
+      "name": "Rema 1000",
+      "org": "883409442",
+      "url": "https://www.rema.no"
+    },
+    {
+      "name": "Lyko",
+      "org": "995398214",
+      "url": "https://lyko.com/no"
+    },
+    {
+      "name": "Telenor",
+      "org": "982463718",
+      "url": "https://telenor.no"
+    },
+    {
+      "name": "Dagbladet",
+      "org": "910119877",
+      "url": "https://www.dagbladet.no"
+    }
+  ]
+}
