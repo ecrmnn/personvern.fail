@@ -35,6 +35,12 @@ export default {
     return { sites };
   },
 
+  head() {
+    return {
+      title: 'Hjem',
+    };
+  },
+
   methods: {
     timeAgo(date) {
       const [d, m, y] = date.split('.');

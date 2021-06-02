@@ -18,7 +18,7 @@ Promise.all(sites.map(async (site) => {
   site.slug = slugify(site.name);
 
   await p
-    .src(site.url, ['1024x768'], { crop: true, filename: site.slug })
+    .src(site.url, ['1440x1000'], { crop: true, filename: site.slug, format: 'jpg' })
     .dest('./static/img')
     .run();
 
