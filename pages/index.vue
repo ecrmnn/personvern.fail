@@ -6,7 +6,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         <div v-for="site in sites" :key="site.url" class="flex">
           <nuxt-link :to="`/${site.slug}/`" class="bg-white shadow hover:shadow-md">
-            <img :src="`/img/${site.slug}.png`" :alt="site.name">
+            <img :src="`/img/${site.slug}.jpg`" :alt="site.name">
             <div class="py-6 px-4">
               <h2 class="font-medium">
                 {{ site.name }}

@@ -90,7 +90,7 @@ export default {
 
   computed: {
     image() {
-      return `/img/${this.site.slug}.png`;
+      return `/img/${this.site.slug}.jpg`;
     },
 
     timeSinceLaw() {
